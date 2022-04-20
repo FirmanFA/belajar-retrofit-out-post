@@ -22,6 +22,6 @@ interface ApiService {
     fun putUser(@Header("Authorization") token: String,
                 @Part("username") username:RequestBody,
                 @Part("email") email: RequestBody,
-                @Part("photo") photo: MultipartBody.Part)
+                @Part photo: MultipartBody.Part): Call<UserUpdateResponse>
 
 }
